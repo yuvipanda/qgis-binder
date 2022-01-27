@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+wget https://github.com/stac-utils/qgis-stac-plugin/releases/download/v1.0.0/qgis_stac.1.0.0.zip
+unzip qgis_stac.1.0.0.zip
+mv qgis_stac ${CONDA_DIR}/envs/notebook/share/qgis/python/plugins
+
