@@ -16,7 +16,9 @@ curl -o quickosm.zip -L https://plugins.qgis.org/plugins/QuickOSM/version/2.0.0/
 unzip quickosm.zip
 mv QuickOSM ${QGIS_PLUGIN_DIR}
 
-
 curl -o osmdownloader.zip -L https://plugins.qgis.org/plugins/OSMDownloader/version/1.0.3/download/
 unzip osmdownloader.zip
 mv OSMDownloader ${QGIS_PLUGIN_DIR}
+
+# Install JOSM
+curl -o ${CONDA_DIR}/bin/josm.jar https://josm.openstreetmap.de/josm-tested.jar
