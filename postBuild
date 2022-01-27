@@ -1,7 +1,22 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+export QGIS_PLUGIN_DIR=${CONDA_DIR}/envs/notebook/share/qgis/python/plugins
+
+
 wget https://github.com/stac-utils/qgis-stac-plugin/releases/download/v1.0.0/qgis_stac.1.0.0.zip
 unzip qgis_stac.1.0.0.zip
-mv qgis_stac ${CONDA_DIR}/envs/notebook/share/qgis/python/plugins
+mv qgis_stac ${QGIS_PLUGIN_DIR}
 
+curl -o quick_map_services.zip -L https://plugins.qgis.org/plugins/quick_map_services/version/0.19.28/download/ 
+unzip quick_map_services.zip
+mv quick_map_services ${QGIS_PLUGIN_DIR}
+
+curl -o quickosm.zip -L https://plugins.qgis.org/plugins/QuickOSM/version/2.0.0/download/
+unzip quickosm.zip
+mv QuickOSM ${QGIS_PLUGIN_DIR}
+
+
+curl -o osmdownloader.zip -L https://plugins.qgis.org/plugins/OSMDownloader/version/1.0.3/download/
+unzip osmdownloader.zip
+mv OSMDownloader ${QGIS_PLUGIN_DIR}
