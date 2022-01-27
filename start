@@ -8,4 +8,8 @@ mkdir -p $HOME/Desktop
 # as $HOME is usually a persistent directory mounted per user
 cp $REPO_DIR/*.desktop $HOME/Desktop/
 
+# Tell code running in notebooks and jupyter terminals where DISPLAY is, 
+# so they know where to launch GUI 
+export DISPLAY=:1.0
+
 exec "$@"
