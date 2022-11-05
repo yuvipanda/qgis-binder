@@ -1,7 +1,7 @@
 channels:
   - conda-forge
 dependencies:
-  - qgis=3.18
+  - qgis=3.22
   - websockify
   - pip
   - pip:
